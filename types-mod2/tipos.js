@@ -1,14 +1,14 @@
 "use strict";
-var log = console.log;
-var myAge;
+const log = console.log;
+let myAge;
 myAge = 26;
 log(typeof myAge);
 //array
-var hobbies = ["Sports", "Cooking"];
+let hobbies = ["Sports", "Cooking"];
 // hobbies = [0]
 log(hobbies[0]);
 // tuplas
-var endereco = ["Av Principal", 99, "Block B"];
+let endereco = ["Av Principal", 99, "Block B"];
 log(endereco);
 // enum
 var Cor;
@@ -17,7 +17,7 @@ var Cor;
     Cor[Cor["Verde"] = 1] = "Verde";
     Cor["Azul"] = "azul";
 })(Cor || (Cor = {}));
-var minhaCor = Cor.Azul;
+let minhaCor = Cor.Azul;
 log(minhaCor); // 'azul'
 minhaCor = Cor.Cinza;
 log(minhaCor); // 0
@@ -27,11 +27,11 @@ function multiply(numA, numB) {
 }
 log(multiply(123, 2));
 // type function
-var calculo;
+let calculo;
 calculo = multiply;
 log(calculo(2, 50));
 //objetos
-var user = {
+let user = {
     name: 'Joao',
     idade: 25
 };
@@ -40,16 +40,16 @@ function batePonto(hora) {
         return 'horario normal';
     return 'fora do horario';
 }
-var employee = {
+let employee = {
     supervisores: ['art', 'gal'],
-    batePonto: batePonto
+    batePonto
 };
 log(employee.batePonto(5), employee.batePonto(9), employee.supervisores);
 // Union Types
-var nota = 10;
-log("Minha nota \u00E9 " + nota);
+let nota = 10;
+log(`Minha nota é ${nota}`);
 nota = 'R$ 10';
-log("Minha nota \u00E9 " + nota);
+log(`Minha nota é ${nota}`);
 //never
 function fail(msg) {
     // while(true) {
@@ -57,11 +57,11 @@ function fail(msg) {
     throw new Error(msg);
 }
 // log(fail('Erro!!'))
-var produto = {
+const produto = {
     name: 'Sabao',
     preco: 12,
     // promocao: this.preco - 10,
-    validarProduto: function () {
+    validarProduto() {
         if (this.name.length < 1) {
             fail('Need a name');
         }
@@ -71,7 +71,7 @@ var produto = {
     }
 };
 log(produto.validarProduto());
-var contato1 = {
+const contato1 = {
     name: 'Art',
     tel1: '123132131',
     tel2: null
