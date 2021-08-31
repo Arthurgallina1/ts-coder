@@ -1,3 +1,3 @@
-const a: string = 'teste ts!'
+const a: string = 'teste ts (webs)!'
 
 console.log(a)
