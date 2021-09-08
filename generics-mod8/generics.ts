@@ -85,6 +85,15 @@ function AddToCache<Tipo, Cache extends HostDeCache>(obj: Tipo, cache: Cache): C
     return cache
 }
 
+const cache = {
+    salvar: <Tipo>(obj: Tipo) => {
+        console.log(`Obj ${obj} salvo no cachce`)
+    },
+    id: '123'
+}
+
+AddToCache('12312', cache )
+
 // Agora usando tipo generico
 interface HostDeCacheGenerico<TipoDeConteudo> {
     salvar: (a: TipoDeConteudo) => void

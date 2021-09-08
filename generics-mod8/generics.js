@@ -58,6 +58,13 @@ function AddToCache(obj, cache) {
     cache.salvar(obj);
     return cache;
 }
+const cache = {
+    salvar: (obj) => {
+        console.log(`Obj ${obj} salvo no cachce`);
+    },
+    id: '123'
+};
+AddToCache('12312', cache);
 // Agora quando o HostDeCacheGenerico é usado, você deve dizer
 // a dele qual é o TipoDeConteudo
 function addTipedObjectToCache(obj, cache) {
