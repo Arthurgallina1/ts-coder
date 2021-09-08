@@ -76,3 +76,8 @@ function loggingId(arg) {
     console.log(arg.length);
     return arg;
 }
+function tester(arg) {
+    console.log(arg);
+    return arg;
+}
+tester('123');

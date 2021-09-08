@@ -115,3 +115,10 @@ function loggingId<Type extends HasLength>(arg: Type): Type {
     console.log(arg.length)
     return arg
 }
+
+function tester<T extends string | number>(arg: T) {
+    console.log(arg)
+    return arg
+}
+
+tester('123')
